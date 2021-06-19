@@ -1,0 +1,72 @@
+﻿<Window x:Class="OrdersBook.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OrdersBook"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+
+
+    <Grid>
+        <TabControl x:Name="tabs">
+            <TabItem Header="Сотрудники">
+                <Grid Background="#FFE5E5E5">
+                    <ListView x:Name="list_of_workes" Margin="10,10,116,10">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn DisplayMemberBinding="{Binding Surname}" Header="Фамилия"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Имя"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding Patranomyc}" Header="Отчество"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding Birth_date}" Header="Дата рождения"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding ShownGender}" Header="Пол"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding ShownDepartment}" Header="Отдел"/>
+
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button Content="Новый" Margin="0,11,0,0" VerticalAlignment="Top" Click="Create_w" HorizontalAlignment="Right" Width="101"/>
+                    <Button Content="Редактировать" Margin="0,36,0,0" VerticalAlignment="Top" Click="Update_w" HorizontalAlignment="Right" Width="101" />
+                    <Button Content="Удалить" Margin="0,61,0,0" VerticalAlignment="Top" Click="Delete_w" HorizontalAlignment="Right" Width="101" />
+                </Grid>
+
+            </TabItem>
+
+            <TabItem Header="Отделы">
+                <Grid Background="#FFE5E5E5">
+                    <Button Content="Новый" Margin="0,11,0,0" VerticalAlignment="Top" Click="Create_d" HorizontalAlignment="Right" Width="101"/>
+                    <Button Content="Редактировать" Margin="0,36,0,0" VerticalAlignment="Top" Click="Update_d" HorizontalAlignment="Right" Width="101" />
+                    <Button Content="Удалить" Margin="0,61,0,0" VerticalAlignment="Top" Click="Delete_d" HorizontalAlignment="Right" Width="101" />
+                    <ListView x:Name="list_of_departments" Margin="10,10,400,10">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn DisplayMemberBinding="{Binding Title}" Header="Название"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding ShownHead}" Header="Глава"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Заказы">
+                <Grid Background="#FFE5E5E5">
+                    <Button Content="Новый" Margin="0,11,0,0" VerticalAlignment="Top" Click="Create_o" HorizontalAlignment="Right" Width="101"/>
+                    <Button Content="Редактировать" Margin="0,36,0,0" VerticalAlignment="Top" Click="Update_o" HorizontalAlignment="Right" Width="101" />
+                    <Button Content="Удалить" Margin="0,61,0,0" VerticalAlignment="Top" Click="Delete_o" HorizontalAlignment="Right" Width="101" />
+                    <ListView x:Name="list_of_orders" Margin="10,10,400,10">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn DisplayMemberBinding="{Binding id}" Header="Номер"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding Contragent}" Header="Контрагент"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding ShownWorker}" Header="Автор"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

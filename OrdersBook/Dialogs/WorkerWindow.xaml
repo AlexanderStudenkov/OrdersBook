@@ -1,0 +1,21 @@
+﻿<Window x:Class="OrdersBook.Dialogs.WorkerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OrdersBook.Dialogs"
+        mc:Ignorable="d"
+        Title="WorkerWindow" Height="450" Width="800">
+    
+    <Grid>
+        <TextBox x:Name="surname"  ToolTip="Фамилия" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="Text" VerticalAlignment="Top" Width="772"/>
+        <TextBox x:Name="name"  ToolTip="Имя" HorizontalAlignment="Left" Height="23" Margin="10,38,0,0" TextWrapping="Wrap" Text="Text" VerticalAlignment="Top" Width="772"/>
+        <TextBox x:Name="patronomyc"  ToolTip="Отчество" HorizontalAlignment="Left" Height="23" Margin="10,66,0,0" TextWrapping="Wrap" Text="Text" VerticalAlignment="Top" Width="772"/>
+        <DatePicker x:Name="birth_date" ToolTip="Дата рождения" Margin="10,94,547,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="gender" ToolTip="Пол" HorizontalAlignment="Left" Margin="10,123,0,0" VerticalAlignment="Top" Width="235"/>
+        <ComboBox x:Name="department" ToolTip="Отдел" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="235">
+        </ComboBox>
+        <Button Content="Сохранить" HorizontalAlignment="Left" Margin="18,242,0,0" VerticalAlignment="Top" Width="75" Click="Save"/>
+        
+    </Grid>
+</Window>
